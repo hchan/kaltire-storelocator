@@ -1,0 +1,16 @@
+{
+	"id": "23ce7f13-3275-4b11-bedc-3ba3503a035d",
+	"name": "kaltire-prod",
+	"values": [
+		{
+			"key": "baseUrl",
+			"value": "https://www.kaltire.com",
+			"type": "text",
+			"description": "",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2019-06-02T16:11:50.569Z",
+	"_postman_exported_using": "Postman/6.5.3"
+}
