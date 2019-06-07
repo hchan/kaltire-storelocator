@@ -20,7 +20,6 @@ steps:
     customCommand: 'install -g newman'
     verbose: true
 
-  steps:
 - script: |
     echo Build.SourcesDirectory $(Build.SourcesDirectory)
     npm run $(Build.SourcesDirectory)/kaltire-storelocation.collection.json -e $(Build.SourcesDirectory)/kaltire-prod-env.json
