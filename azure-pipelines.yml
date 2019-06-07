@@ -13,14 +13,14 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-    npm install -g newman
   displayName: 'Run a multi-line script'
-
-
-- task: NewmanPostman@3
+  
+- task: Npm@1
   inputs:
-    collectionSourceType: 'file'
-    collectionFileSource: 'kaltire-storelocation.collection.json'
-    Contents: 
-    folder: '$(Build.SourcesDirectory)'
-    environment: 'kaltire-prod-env.json'
+    command: 'install'
+
+- script: |
+    pwd
+    ls -l
+    ./node_modules/.bin/newman kaltire-storelocation.collection.json -e kaltire-prod-env.json
+  displayName: 'Run newman'
