@@ -1,15 +1,11 @@
 {
-  "name": "Kal Timre newman demo",
+  "name": "kaltire-newman",
   "version": "1.0.0",
-  "description": "",
+  "description": "Postman/Newman testscripts and environments",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "newman": "^4.5.0"
   },
-  "devDependencies": {},
-  "scripts": {
-  },
-  "author": "Henry Chan"
+  "homepage": "https://github.com/hchan/kaltire-storelocator#readme"
 }
-
-
