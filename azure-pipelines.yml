@@ -17,7 +17,8 @@ steps:
 
 - task: Npm@1
   inputs:
-    customCommand: 'install -g newman'
+    command: 'install'
+    customCommand: '-g newman'
     verbose: true
 
 - script: |
