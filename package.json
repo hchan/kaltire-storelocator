@@ -1,0 +1,15 @@
+{
+  "name": "Kal Timre newman demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "newman": "^4.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+  },
+  "author": "Henry Chan"
+}
+
+
