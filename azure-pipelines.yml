@@ -20,5 +20,7 @@ steps:
     command: 'install'
 
 - script: |
+    pwd
+    ls -l
     ./node_modules/.bin/newman kaltire-storelocation.collection.json -e kaltire-prod-env.json
   displayName: 'Run newman'
