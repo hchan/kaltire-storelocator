@@ -23,4 +23,4 @@ steps:
 
 - script: |
     echo Build.SourcesDirectory $(Build.SourcesDirectory)
-    npm run $(Build.SourcesDirectory)/kaltire-storelocation.collection.json -e $(Build.SourcesDirectory)/kaltire-prod-env.json
+    newman run $(Build.SourcesDirectory)/kaltire-storelocation.collection.json -e $(Build.SourcesDirectory)/kaltire-prod-env.json
