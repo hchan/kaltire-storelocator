@@ -1,4 +1,4 @@
-# Starter pipeline
+# Henry's newman runner
 
 trigger:
 - master
@@ -7,19 +7,18 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
   
+# FYI, there is a task from Azure marketplace called Newman, but its very buggy
+# OR Azure Dev Ops has changed their pipeline framework to make this incompatible
+# I'm leaning towards the latter
+# Anways, just install 'newman' locally in ./node_modules/.bin
 - task: Npm@1
   inputs:
     command: 'install'
+  displayName: 'Install newman'
 
 - script: |
     echo "Running newman scripts"
     ./node_modules/.bin/newman run kaltire-storelocation.collection.json -e kaltire-prod-env.json
   displayName: 'Run newman'
+
