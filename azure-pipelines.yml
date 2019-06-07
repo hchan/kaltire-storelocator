@@ -15,15 +15,10 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-
 - task: Npm@1
   inputs:
     command: 'install'
 
-- task: NewmanPostman@3
-  inputs:
-    collectionSourceType: 'file'
-    collectionFileSource: 'kaltire-storelocation.collection.json'
-    Contents: 
-    folder: '$(Build.SourcesDirectory)'
-    environment: 'kaltire-prod-env.json'
+- script: |
+    ./node_modules/.bin/newman kaltire-storelocation.collection.json -e kaltire-prod-env.json
+  displayName: 'Run newman'
