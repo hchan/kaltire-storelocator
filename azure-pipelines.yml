@@ -22,5 +22,6 @@ steps:
     verbose: true
 
 - script: |
+    apt-get install -y newman
     echo Build.SourcesDirectory $(Build.SourcesDirectory)
     newman run $(Build.SourcesDirectory)/kaltire-storelocation.collection.json -e $(Build.SourcesDirectory)/kaltire-prod-env.json
