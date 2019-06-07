@@ -19,10 +19,8 @@ steps:
   inputs:
     customCommand: 'install -g newman'
     verbose: true
-- task: NewmanPostman@3
-  inputs:
-    collectionSourceType: 'file'
-    environment: 'kaltire-prod-env.json'
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+
+  steps:
+- script: |
+    echo Build.SourcesDirectory $(Build.SourcesDirectory)
+    npm run $(Build.SourcesDirectory)/kaltire-storelocation.collection.json -e $(Build.SourcesDirectory)/kaltire-prod-env.json
