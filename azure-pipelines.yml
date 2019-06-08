@@ -21,6 +21,7 @@ steps:
 
 - script: |
     echo "Running newman scripts"
+    echo postman.api.key $(postman.api.key)
     # Note that the * glob below *could* be dangerous.  Assume only one collection and one environment file
     ./node_modules/.bin/newman run $(ls *collection.json) -e $(ls *environment.json) --reporters cli,junit
   displayName: 'Run newman'
