@@ -20,6 +20,13 @@ steps:
   displayName: 'Install newman'
 
 - script: |
+    echo I am here
+    echo I am here2
+    exit
+    echo I am here3
+  displayName : 'does exit work?'
+
+- script: |
     echo "Running newman scripts"
     # Remove collection and environment files
     rm *collection.json *environment.json
