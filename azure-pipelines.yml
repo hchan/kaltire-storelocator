@@ -21,13 +21,16 @@ steps:
 
 - script: |
     echo "Running newman scripts"
-    # Download postman collection
+    # Remove collection and environment files
+    rm *collection.json *environment.json
+    # Download LATEST postman collection
     curl --location --request GET "https://api.getpostman.com/collections/9fb7efb0-0170-4cd8-ab11-e3d3a033e470" \
     --header "X-Api-Key: $(postman.api.key)" > 000.postman_collection.json
-    # Download postman environment
+    # Download LATEST postman environment
     curl --location --request GET "https://api.getpostman.com/environments/ca6ee577-85df-44ab-b0e0-1eb35a92dd0f" \
     --header "X-Api-Key: $(postman.api.key)" > 000.postman_environment.json
-    # Note to Henry ... if my demo fails, then don't download the files above ... just use the backup cache in github
+    # Note to Henry ... if my demo fails due to the api limit, then don't download the files above ... 
+    # just use the backup cache in github
     # Assume first collection and first environment file
     ./node_modules/.bin/newman run $(ls *collection.json | head -1) -e $(ls *environment.json | head -1) --reporters cli,junit
   displayName: 'Run newman'
