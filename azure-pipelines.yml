@@ -1,5 +1,7 @@
 # Henry's newman runner
 
+# TODO
+# this should be triggered from kaltire-storelocator
 trigger:
 - master
 
@@ -19,6 +21,7 @@ steps:
 
 - script: |
     echo "Running newman scripts"
-    ./node_modules/.bin/newman run kaltire-storelocation.collection.json -e kaltire-prod-env.json
+    # Note that the * glob below *could* be dangerous.  Assume only one collection and one environment file
+    ./node_modules/.bin/newman run $(ls *collection.json) -e $(ls *env.json)
   displayName: 'Run newman'
 
