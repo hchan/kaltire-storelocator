@@ -3,3 +3,5 @@ build
 npm-debug.log
 .env
 .DS_Store
+000.postman_collection.json
+000.postman_environment.json
