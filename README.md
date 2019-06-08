@@ -3,7 +3,6 @@
 Postman/Newman testscripts and environments
 
 ## TODO
-* Create a Team project in Postman
 * Buy the Postman pro-version
-    * Use the pro version git
-* integrate with Azure Dev Ops    
+    * share project with the team
+    * Use the pro version `git` https://learning.getpostman.com/docs/postman_pro/integrations/github/
