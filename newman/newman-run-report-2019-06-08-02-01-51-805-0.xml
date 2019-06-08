@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="kaltire-storelocator" tests="3" time="0.572">
+  <testsuite name="Antartica" id="2b9c845e-e157-42ae-8e79-24d2cda41d2c" timestamp="2019-06-08T02:01:50.853Z" tests="2" failures="0" errors="0" time="0.367">
+    <testcase name="response is ok" time="0.367" classname="KaltireStorelocator"/>
+    <testcase name="has no locations" time="0.367" classname="KaltireStorelocator"/>
+  </testsuite>
+  <testsuite name="Vancouver" id="43d4260c-a84f-483f-9ea3-4edf11a02d9f" timestamp="2019-06-08T02:01:50.853Z" tests="3" failures="0" errors="0" time="0.102">
+    <testcase name="response is ok" time="0.102" classname="KaltireStorelocator"/>
+    <testcase name="has some locations" time="0.102" classname="KaltireStorelocator"/>
+    <testcase name="location id 663 is in Vancouver" time="0.102" classname="KaltireStorelocator"/>
+  </testsuite>
+  <testsuite name="Vernon" id="6cfb9a42-ad30-42c2-b02e-95355c918af8" timestamp="2019-06-08T02:01:50.853Z" tests="3" failures="0" errors="0" time="0.103">
+    <testcase name="response is ok" time="0.103" classname="KaltireStorelocator"/>
+    <testcase name="has some locations" time="0.103" classname="KaltireStorelocator"/>
+    <testcase name="location id 31 is in Vancouver" time="0.103" classname="KaltireStorelocator"/>
+  </testsuite>
+</testsuites>
