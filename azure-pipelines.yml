@@ -19,15 +19,10 @@ steps:
     command: 'install'
   displayName: 'Install newman'
 
+# Note to Henry ... if my demo fails due to the postman api limit, then don't download the files 
+# just use the backup cache in github
+# i.e. put an `exit` early in the script
 - script: |
-    echo I am here
-    echo I am here2
-    exit
-    echo I am here3
-  displayName : 'does exit work?'
-
-- script: |
-    echo "Running newman scripts"
     # Remove collection and environment files
     rm *collection.json *environment.json
     # Download LATEST postman collection
@@ -36,8 +31,11 @@ steps:
     # Download LATEST postman environment
     curl --location --request GET "https://api.getpostman.com/environments/ca6ee577-85df-44ab-b0e0-1eb35a92dd0f" \
     --header "X-Api-Key: $(postman.api.key)" > 000.postman_environment.json
-    # Note to Henry ... if my demo fails due to the api limit, then don't download the files above ... 
-    # just use the backup cache in github
+    ls -l *.json
+  displayName : 'Download latest postman collection and environment'
+
+- script: |
+    echo "Running newman scripts"
     # Assume first collection and first environment file
     ./node_modules/.bin/newman run $(ls *collection.json | head -1) -e $(ls *environment.json | head -1) --reporters cli,junit
   displayName: 'Run newman'
