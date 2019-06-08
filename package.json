@@ -1,13 +1,9 @@
 {
-  "name": "kaltire-newman",
+  "name": "kaltire-storelocator-newman",
   "version": "1.0.0",
   "description": "Postman/Newman testscripts and environments",
   "main": "index.js",
-  "dependencies": {
-    "newman-reporter-junitfull": "^1.1.1"
-  },
   "devDependencies": {
     "newman": "^4.5.0"
-  },
-  "homepage": "https://github.com/hchan/kaltire-storelocator#readme"
+  }
 }
