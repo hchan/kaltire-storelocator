@@ -22,6 +22,13 @@ steps:
 - script: |
     echo "Running newman scripts"
     # Note that the * glob below *could* be dangerous.  Assume only one collection and one environment file
-    ./node_modules/.bin/newman run $(ls *collection.json) -e $(ls *env.json)
+    ./node_modules/.bin/newman run $(ls *collection.json) -e $(ls *env.json) --reporters cli,junit
   displayName: 'Run newman'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: 'newman/*.xml'
+    mergeTestResults: true
+    failTaskOnFailedTests: true
 
