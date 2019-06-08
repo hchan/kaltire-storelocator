@@ -19,9 +19,11 @@ steps:
     command: 'install'
   displayName: 'Install newman'
 
-# Note to Henry ... if my demo fails due to the postman api limit, then don't download the files 
+# Note to Henry ... if my demo fails due to the api limit, 
+# https://docs.api.getpostman.com/?version=latest
+# then don't download the files below ... 
 # just use the backup cache in github
-# i.e. put an `exit` early in the script
+# This is the riskiest part of the demo
 - script: |
     # Remove collection and environment files
     rm *collection.json *environment.json
