@@ -1,7 +1,7 @@
 # Kal Tire Storelocator Postman
 
 Postman/Newman testscripts and environments that will test
-https://github.com/hchan/kaltire-storelocator
+https://github.com/hchan/kaltire-storelocator-fake
 
 ## TODO
 * Buy the Postman pro-version
