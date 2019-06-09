@@ -1,7 +1,7 @@
-# Henry's newman runner
+# Henry's newman runner to test Kal Tire Store Locator's REST API
 
-# TODO
-# this should be triggered from kaltire-storelocator
+# this should is a dependency build from kaltire-storelocator
+# Technically, we should poll a Health Check / Actuator before we do testing
 trigger:
 - master
 
@@ -9,7 +9,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  
 # FYI, there is a task from Azure marketplace called Newman, but its very buggy
 # OR Azure Dev Ops has changed their pipeline framework to make this incompatible
 # I'm leaning towards the latter
