@@ -4,6 +4,6 @@
   "description": "Postman/Newman testscripts and environments",
   "main": "index.js",
   "devDependencies": {
-    "newman": "^4.5.0"
+    "newman": "^5.3.2"
   }
 }
